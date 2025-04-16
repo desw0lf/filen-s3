@@ -16,7 +16,7 @@ class DeleteObjects {
     }
     async handle(req, res, next) {
         try {
-            const isQueryAllowed = (0, validate_query_1.validateQuery)(req.query, { delete: { required: true, anyValue: true }, "x-id": "DeleteObject" });
+            const isQueryAllowed = (0, validate_query_1.validateQuery)(req.query, { delete: { required: true, anyValue: true }, "x-id": "DeleteObjects" });
             if (!isQueryAllowed || typeof req.decodedBody === "undefined") {
                 next();
                 return;
